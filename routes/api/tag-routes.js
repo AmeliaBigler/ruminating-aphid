@@ -34,6 +34,11 @@ router.get('/:id', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
+  /* req.body should look like this...
+    {
+      "tag_name": "yellow",
+    }
+  */
   // create a new tag
   try {
     const tagData = await Tag.create(req.body);
